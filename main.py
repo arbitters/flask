@@ -1,7 +1,8 @@
-from config import REDIRECT_URL_LEAGUE,REDIRECT_URL_COUNTER,OAUTH_URL_LEAGUE,OAUTH_URL_COUNTER
+from config import REDIRECT_URL_LEAGUE,REDIRECT_URL_COUNTER,OAUTH_URL_LEAGUE,OAUTH_URL_COUNTER,CLIENT_SECRET
 from flask import Flask,render_template, request,session
 from flask_mysqldb import MySQL
 from zenora import APIClient
+import data
 from dotenv import load_dotenv
 import os
 
@@ -14,12 +15,9 @@ app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = '0en6pbybktiIE41UpRnu'
 app.config['MYSQL_PORT'] = 6415
 app.config['MYSQL_DB'] = 'railway'
-load_dotenv()
-token = os.getenv('TOKEN')
-secret = os.getenv('CLIENT_SECRET')
 mysql = MySQL(app)
-
-client = APIClient(token,client_secret=secret)
+token = data.getToken()
+client = APIClient(token,client_secret=CLIENT_SECRET)
 
 def create_league_table():
     cur = mysql.connection.cursor()
