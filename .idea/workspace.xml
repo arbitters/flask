@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="660c16e4-4347-4e39-bd01-e08943639653" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/static/images/1024x576.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/counter-strike-contra-csgo-wallpaper-preview.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/counterBanner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/discord.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/images.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/leagueBanner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/valorant.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/counter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/counterPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/invalid.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/league.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/leaguePage.html" afterDir="false" />
+    <list default="true" id="660c16e4-4347-4e39-bd01-e08943639653" name="Changes" comment="new changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
@@ -66,6 +55,21 @@
       <option name="presentableId" value="Default" />
       <updated>1692370589523</updated>
     </task>
+    <task id="LOCAL-00001" summary="new changes">
+      <created>1692371117570</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1692371117570</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="new changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="new changes" />
   </component>
 </project>

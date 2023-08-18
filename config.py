@@ -1,7 +1,5 @@
 from urllib import parse
 
-TOKEN = 'MTE0MDc0MDE0NjA5OTEzODY0MA.Gz8dYA.Ux_bHbot8Dr9GZYHKkuTMQeX92QZYeRnERB7aA'
-CLIENT_SECRET = 'SnwhkeIUwg3AIKZ7aSpUUQGUbbQc8Qlo'
 REDIRECT_URL = 'http://localhost:5000/oauth/callback'
 REDIRECT_URL_LEAGUE = 'https://matches.arbiters.io/oauth/callback/league'
 REDIRECT_URL_COUNTER = 'https://matches.arbiters.io/oauth/callback/counter'
