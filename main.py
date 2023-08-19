@@ -1,6 +1,5 @@
 from config import REDIRECT_URL_LEAGUE,REDIRECT_URL_COUNTER,OAUTH_URL_LEAGUE,OAUTH_URL_COUNTER,CLIENT_SECRET
 from flask import Flask,render_template, request,session
-#from flask_mysqldb import MySQL
 from zenora import APIClient
 import data
 import os
