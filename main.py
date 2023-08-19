@@ -79,7 +79,7 @@ def leagueRegister():
             already_registered = True
             return render_template('league.html', already_registered=already_registered)
 
-        data.insertLeagueUser(leagueUser,walletAddress,leagueServer,discordUser)
+        data.insertLeagueUser(discordUser,leagueUser,walletAddress,leagueServer)
         registration_successful = True
         return render_template('league.html', registration_successful=registration_successful)
 
