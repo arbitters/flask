@@ -1,6 +1,6 @@
 from config import REDIRECT_URL_LEAGUE,REDIRECT_URL_COUNTER,OAUTH_URL_LEAGUE,OAUTH_URL_COUNTER,CLIENT_SECRET
 from flask import Flask,render_template, request,session
-from flask_mysqldb import MySQL
+#from flask_mysqldb import MySQL
 from zenora import APIClient
 import data
 import os
@@ -14,41 +14,14 @@ app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = '0en6pbybktiIE41UpRnu'
 app.config['MYSQL_PORT'] = 6415
 app.config['MYSQL_DB'] = 'railway'
-mysql = MySQL(app)
+
 token = data.getToken()
 client = APIClient(token,client_secret=CLIENT_SECRET)
-
-def create_league_table():
-    cur = mysql.connection.cursor()
-    cur.execute("""
-        CREATE TABLE IF NOT EXISTS league (
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            discordUser VARCHAR(255) UNIQUE,
-            leagueUser VARCHAR(255),
-            walletAddress VARCHAR(255),
-            leagueServer VARCHAR(255)
-        )
-    """)
-    cur.close()
-
-def create_counter_table():
-    cur = mysql.connection.cursor()
-    cur.execute("""
-        CREATE TABLE IF NOT EXISTS counter (
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            discordUser VARCHAR(255) UNIQUE,
-            counterUser VARCHAR(255),
-            walletAddress VARCHAR(255),
-            counterServer VARCHAR(255)
-        )
-    """)
-    cur.close()
 
 
 @app.before_request
 def before_request():
-    create_league_table()
-    create_counter_table()
+    data.createTables()
 
 @app.route("/")
 def home():
@@ -101,20 +74,13 @@ def leagueRegister():
         walletAddress = request.form['walletAddress']
         leagueServer = request.form['leagueServer']
         discordUser = session.get('current_user')
-        cur = mysql.connection.cursor()
 
-        cur.execute("SELECT discordUser FROM league WHERE discordUser = %s", (discordUser,))
-        existing_user = cur.fetchone()
-
+        existing_user = data.getLeagueUser(discordUser)
         if existing_user:
             already_registered = True
-            cur.close()
             return render_template('league.html', already_registered=already_registered)
 
-        cur.execute("INSERT INTO league (discordUser, leagueUser, walletAddress, leagueServer) VALUES (%s, %s, %s, %s)",
-                    (discordUser, leagueUser, walletAddress, leagueServer))
-        mysql.connection.commit()
-        cur.close()
+        data.insertLeagueUser(leagueUser,walletAddress,leagueServer,discordUser)
         registration_successful = True
         return render_template('league.html', registration_successful=registration_successful)
 
@@ -125,24 +91,19 @@ def leagueRegister():
 def counterRegister():
 
     if request.method == 'POST':
-        leagueUser = request.form['counterUser']
+        counterUser = request.form['counterUser']
         walletAddress = request.form['walletAddress']
         counterServer = request.form['counterServer']
         discordUser = session.get('current_user')
-        cur = mysql.connection.cursor()
 
-        cur.execute("SELECT discordUser FROM counter WHERE discordUser = %s", (discordUser,))
-        existing_user = cur.fetchone()
+
+        existing_user = data.getCounterUser(discordUser)
 
         if existing_user:
             already_registered = True
-            cur.close()
             return render_template('counter.html', already_registered=already_registered)
 
-        cur.execute("INSERT INTO counter (discordUser, counterUser, walletAddress, counterServer) VALUES (%s, %s, %s, %s)",
-                    (discordUser, leagueUser, walletAddress, counterServer))
-        mysql.connection.commit()
-        cur.close()
+        data.insertCounterUser(discordUser,counterUser,walletAddress,counterServer)
         registration_successful = True
         return render_template('counter.html', registration_successful=registration_successful)
 
