@@ -24,7 +24,7 @@ def before_request():
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("index1.html")
 
 @app.route("/counterPage")
 def counter():
@@ -48,7 +48,7 @@ def callbackLeague():
         return render_template('league.html')
 
     except Exception as ex:
-        return render_template('invalid.html')
+        return render_template('index1.html')
 
 
 @app.route("/oauth/callback/counter")
@@ -63,7 +63,7 @@ def callbackCounter():
         return render_template('counter.html')
 
     except Exception as ex:
-        return render_template('index.html')
+        return render_template('index1.html')
 
 @app.route('/registerLeague', methods=['POST', 'GET'])
 def leagueRegister():
@@ -83,7 +83,7 @@ def leagueRegister():
         registration_successful = True
         return render_template('league.html', registration_successful=registration_successful)
 
-    return render_template('index.html', already_registered=False)
+    return render_template('index1.html', already_registered=False)
 
 
 @app.route('/registerCounter', methods=['POST', 'GET'])
@@ -106,7 +106,7 @@ def counterRegister():
         registration_successful = True
         return render_template('counter.html', registration_successful=registration_successful)
 
-    return render_template('index.html', already_registered=False)
+    return render_template('index1.html', already_registered=False)
 
 
 if __name__ == '__main__':
