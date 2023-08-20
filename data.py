@@ -29,19 +29,19 @@ def createTables():
     create_league_table = """
         CREATE TABLE IF NOT EXISTS league (
             id INT AUTO_INCREMENT PRIMARY KEY,
-            discordUser VARCHAR(255) UNIQUE,
-            leagueUser VARCHAR(255),
-            walletAddress VARCHAR(255),
-            leagueServer VARCHAR(255)
+            discord_user VARCHAR(255) UNIQUE,
+            league_user VARCHAR(255),
+            wallet_address VARCHAR(255),
+            league_server VARCHAR(255)
         )
     """
     create_counter_table = """
         CREATE TABLE IF NOT EXISTS counter (
             id INT AUTO_INCREMENT PRIMARY KEY,
-            discordUser VARCHAR(255) UNIQUE,
-            counterUser VARCHAR(255),
-            walletAddress VARCHAR(255),
-            counterServer VARCHAR(255)
+            discord_user VARCHAR(255) UNIQUE,
+            counter_user VARCHAR(255),
+            wallet_address VARCHAR(255),
+            counter_server VARCHAR(255)
         )
     """
     cursor.execute(create_league_table)
@@ -62,7 +62,7 @@ def getLeagueUser(user):
 
     cursor = connection.cursor(dictionary=True)
     table = 'league'
-    query = f"SELECT discordUser FROM {table} WHERE discordUser = %s"
+    query = f"SELECT discord_user FROM {table} WHERE discord_user = %s"
     cursor.execute(query, (user,))
     user_exists = cursor.fetchone() is not None
     cursor.close()
@@ -80,7 +80,7 @@ def getCounterUser(user):
 
     cursor = connection.cursor(dictionary=True)
     table = 'counter'
-    query = f"SELECT discordUser FROM {table} WHERE discordUser = %s"
+    query = f"SELECT discord_user FROM {table} WHERE discord_user = %s"
     cursor.execute(query, (user,))
     user_exists = cursor.fetchone() is not None
     cursor.close()
@@ -101,7 +101,7 @@ def insertLeagueUser(discordUser, leagueUser, walletAddress, leagueServer):
     table = 'league'
 
     insert_query = """
-        INSERT INTO {} (discordUser, leagueUser, walletAddress, leagueServer)
+        INSERT INTO {} (discord_user, league_user, wallet_address, league_server)
         VALUES (%s, %s, %s, %s)
     """.format(table)
     values = (discordUser, leagueUser, walletAddress, leagueServer)
@@ -123,7 +123,7 @@ def insertCounterUser(discordUser, counterUser, walletAddress, counterServer):
     table = 'counter'
 
     insert_query = """
-        INSERT INTO {} (discordUser, counterUser, walletAddress, counterServer)
+        INSERT INTO {} (discord_user, counter_user, wallet_address, counter_server)
         VALUES (%s, %s, %s, %s)
     """.format(table)
     values = (discordUser, counterUser, walletAddress, counterServer)
