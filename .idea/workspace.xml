@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="660c16e4-4347-4e39-bd01-e08943639653" name="Changes" comment="new changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/counter.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/counter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/counterPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/counterPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/league.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/league.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/leaguePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/leaguePage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index1.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692561838127</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="new changes">
+      <created>1692567432147</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1692567432147</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="UnknownFeatures">
