@@ -63,7 +63,7 @@ def callbackCounter():
         return render_template('counter.html')
 
     except Exception as ex:
-        return render_template('invalid.html')
+        return render_template('index.html')
 
 @app.route('/registerLeague', methods=['POST', 'GET'])
 def leagueRegister():
