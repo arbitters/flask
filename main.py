@@ -26,12 +26,12 @@ def before_request():
 def home():
     return render_template("index.html")
 
-@app.route("/counterPage")
+@app.route("/CSGO")
 def counter():
     return render_template('counterPage.html', oauth_uri=OAUTH_URL_COUNTER)
 
 
-@app.route("/leaguePage")
+@app.route("/LOL")
 def league():
     return render_template('leaguePage.html', oauth_uri=OAUTH_URL_LEAGUE)
 
