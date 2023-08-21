@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="660c16e4-4347-4e39-bd01-e08943639653" name="Changes" comment="new endpoints">
+    <list default="true" id="660c16e4-4347-4e39-bd01-e08943639653" name="Changes" comment="new changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/counterPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/counterPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/leaguePage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/leaguePage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/counter.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/counter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/league.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/league.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,15 +217,22 @@
       <option name="project" value="LOCAL" />
       <updated>1692637558104</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="new changes">
+      <created>1692638074675</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1692638074675</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new changes" />
     <MESSAGE value="new endpoints" />
-    <option name="LAST_COMMIT_MESSAGE" value="new endpoints" />
+    <MESSAGE value="new changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="new changes" />
   </component>
 </project>
