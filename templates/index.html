@@ -35,7 +35,7 @@
       }
 
     body {
-      background: #000000
+      background: #ece9e9
     }
 
     header {
@@ -47,15 +47,15 @@
       align-items: center;
       justify-content: space-between;
       padding: 40px;
-      background-image: linear-gradient(to right, #000000, #ea0000 130%);
+      background: #000000;
+      height: 5%;
     }
 
 
     .logo {
-      font-size: 30px;
-      font-weight: 600;
-      color: rgb(255, 252, 252);
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    width: 50px;
+    height: 50x;
     }
 
 
@@ -99,18 +99,18 @@
         font-size: 0.8rem;
         text-decoration: none;
         overflow: hidden;
-        box-shadow: 0 0 3rem -1rem rgba(214, 9, 9, 0.5);
+     /*   box-shadow: 0 0 3rem -1rem rgba(214, 9, 9, 0.5); */
         transition: transform 0.1s ease-in-out, box-shadow 0.1s;
     }
 
     .card:nth-child(1):hover{
         transform: translateY(-0.5rem) scale(1.0125);
-        box-shadow: 0 0.5em 3rem -1rem rgb(255, 255, 255);
+        box-shadow: 0.6em 0.5em 3rem -0.1rem rgb(0,0,153);
     }
 
     .card:nth-child(2):hover{
         transform: translateY(-0.5rem) scale(1.0125);
-        box-shadow: 0 0.5em 3rem -1rem rgb(255, 255, 255);
+        box-shadow: 0 0.5em 3rem 0.3rem rgb(0, 0, 0);
     }
 
     .card:nth-child(3):hover img {
@@ -123,6 +123,7 @@
     }
 
     .card-description {
+        background: #000000;
         display: block;
         padding: 1em 0.5em;
         color: white;
@@ -141,14 +142,15 @@
 <body>
 
 
+
 <header>
-    <a href="#" class="logo">ARBITERS</a>
+    <img src="/static/images/logo1.png" alt="Logo" class="logo">
 </header>
 
 <ul class="card-list">
 
     <li class="card">
-        <a class="card-image" href="https://register.arbiters.io/leaguePage" target="_blank" style="background-image: url(/static/images/1024x576.jpeg);" data-image-full="/static/images/1024x576.jpeg">
+        <a class="card-image" href="https://register.arbiters.io/leaguePage" target="_blank" style="background-image: url(/static/images/league-of-legends.jpg);" data-image-full="/static/images/league-of-legends.jpg">
             <img/>
         </a>
         <a class="card-description" href="https://register.arbiters.io/leaguePage" target="_blank">
@@ -158,7 +160,7 @@
     </li>
 
     <li class="card">
-        <a class="card-image" href="https://register.arbiters.io/counterPage" target="_blank" style="background-image: url(/static/images/counter-strike-contra-csgo-wallpaper-preview.jpg);" data-image-full="/static/images/counter-strike-contra-csgo-wallpaper-preview.jpg">
+        <a class="card-image" href="https://register.arbiters.io/counterPage" target="_blank" style="background-image: url(/static/images/cs-go.jpg);" data-image-full="/static/images/cs-go.jpg">
             <img/>
         </a>
         <a class="card-description" href="https://register.arbiters.io/counterPage" target="_blank">
@@ -168,7 +170,7 @@
     </li>
 
     <li class="card">
-        <a class="card-image" href="#" style="background-image: url(/static/images/valorant.png);" data-image-full="/static/images/valorant.png">
+        <a class="card-image" href="#" style="background-image: url(/static/images/desktop-wallpaper-valorant-logo.jpg);" data-image-full="/static/images/desktop-wallpaper-valorant-logo.jpg">
             <img/>
         </a>
         <a class="card-description" href="#">
