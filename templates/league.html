@@ -7,9 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register</title>
     <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
-
-     <style>
-  * {
+<style>
+     * {
     margin: 0;
     padding: 0;
   }
@@ -25,7 +24,6 @@ html {
   }
 
 
-
   body {
     margin:0;
     padding:0;
@@ -38,10 +36,9 @@ html {
     background-attachment: fixed;
     background-size: 100% 100%;
     background-color:#000000;
-
   }
 
-  .custom-alert-container {
+ .custom-alert-container {
     position: fixed;
     top: 20px;
     left: 50%;
@@ -60,12 +57,12 @@ html {
         }
 
         .alert-success {
-            background-color: #4CAF50;
+            background-color: green;
             color: #fff;
         }
 
         .alert-error {
-            background-color: #FF5733;
+            background-color: red;
             color: #fff;
         }
 
@@ -208,6 +205,14 @@ html {
                 0 0 50px #ff2313,
                 0 0 100px #ff2313;
     }
+
+       @media only screen and (max-width: 767px) {
+  body {
+    background:#000000;
+  }
+}
+
+
      </style>
 <script>
     {% if already_registered %}
@@ -232,11 +237,11 @@ html {
 
 <body>
     <div class="login-box">
-            <h2>League Form</h2>
+            <h2>LOL Form</h2>
             <form method="POST" action="/registerLeague">
                 <div class="user-box">
                      <input type="text" name="leagueUser" required>
-                      <label for="leagueUser">League User:</label>
+                      <label for="leagueUser">LOL User:</label>
                 </div>
 
                 <div class="user-box">

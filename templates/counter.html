@@ -37,7 +37,6 @@ html {
     background-attachment: fixed;
     background-size: 100% 100%;
     background-color:#000000;
-
   }
 
  .custom-alert-container {
@@ -59,12 +58,12 @@ html {
         }
 
         .alert-success {
-            background-color: #4CAF50;
+            background-color: green;
             color: #fff;
         }
 
         .alert-error {
-            background-color: #FF5733;
+            background-color: red;
             color: #fff;
         }
 
@@ -207,6 +206,16 @@ html {
                 0 0 50px #ff2313,
                 0 0 100px #ff2313;
     }
+
+       @media only screen and (max-width: 767px) {
+  body {
+    background:#000000;
+  }
+}
+
+
+
+
      </style>
 <script>
     {% if already_registered %}
@@ -229,11 +238,11 @@ html {
 
 <body>
     <div class="login-box">
-            <h2>Counter Form</h2>
+            <h2>CSGO Form</h2>
             <form method="POST" action="/registerCounter">
                 <div class="user-box">
                      <input type="text" name="counterUser" required>
-                      <label for="counterUser">Counter User:</label>
+                      <label for="counterUser">CSGO User:</label>
                 </div>
 
                 <div class="user-box">
