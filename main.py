@@ -22,13 +22,19 @@ client = APIClient(token,client_secret=CLIENT_SECRET)
 def before_request():
     data.createTables()
 
+
+
+@app.errorhandler(404)
+def not_found_error(error):
+    return render_template('index.html'), 404
+
 @app.route("/")
 def home():
     return render_template("index.html")
 
-@app.route("/CSGO")
-def counter():
-    return render_template('counterPage.html', oauth_uri=OAUTH_URL_COUNTER)
+#@app.route("/CSGO")
+#def counter():
+    #return render_template('index.html', oauth_uri=OAUTH_URL_COUNTER)
 
 
 @app.route("/LOL")
